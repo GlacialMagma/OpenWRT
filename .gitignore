@@ -12,7 +12,10 @@
 *.iml
 
 # OpenWRT source
-source/
+openwrt/
+feeds/
+logs/
+bin/
 
 # CMake
 cmake-build-debug/
