@@ -1,0 +1,28 @@
+version: '2.3'
+
+services:
+  openwrt:
+    build:
+      context: .
+    image: djschaper/openwrt:0.1
+    volumes:
+      - type: bind
+        source: ./openwrt/
+        target: /opt/openwrt
+        volume:
+          nocopy: true
+      - type: bind
+        source: ./feeds/
+        target: /opt/openwrt/feeds
+        volume:
+          nocopy: true
+      - type: bind
+        source: ./bin/
+        target: /opt/openwrt/bin
+        volume:
+          nocopy: true
+      - type: bind
+        source: ./files/
+        target: /opt/openwrt/files
+        volume:
+          nocopy: true
