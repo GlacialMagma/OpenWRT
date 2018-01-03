@@ -1,0 +1,7 @@
+version: '2.3'
+
+services:
+  openwrt:
+    build:
+      context: .
+    image: djschaper/openwrt:0.1
